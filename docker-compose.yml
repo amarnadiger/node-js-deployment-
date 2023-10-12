@@ -1,14 +1,14 @@
 version: '3'
 services:
+  shared:
+    build: .
+    ports:
+      - "3001:3001"
   frontend:
     build:
       context: ./frontend/
     ports:
       - "3000:3000"
 
-  shared:
-    build: .
-    ports:
-      - "3001:3001"
-
+  
     
