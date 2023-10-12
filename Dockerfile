@@ -2,7 +2,7 @@
 FROM node:14
 # Set the working directory in the container
 WORKDIR /app
-COPY . /app #copy the enire source code in the present working directory 
+#COPY . /app #copy the enire source code in the present working directory 
 WORKDIR /frontend
 RUN npm install #installing dependencies which are related to frontend 
 WORKDIR ..
