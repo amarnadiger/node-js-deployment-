@@ -9,7 +9,8 @@ COPY /frontend/package.json ./
 
 # Install the application dependencies
 RUN npm install
-
+COPY package*.json ./
+RUN npm install
 # Bundle your app source code inside the Docker image
 COPY . .
 
