@@ -1,8 +1,8 @@
 # Use an official Node.js runtime as a parent image
 FROM node:14
 # Set the working directory in the container
-WORKDIR /usr/src/app
-#COPY . . #copy the enire source code in the present working directory 
+WORKDIR /app
+COPY . . #copy the enire source code in the present working directory 
 WORKDIR /frontend
 RUN npm install #installing dependencies which are related to frontend 
 WORKDIR ..
