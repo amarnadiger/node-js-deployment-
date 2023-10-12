@@ -7,4 +7,4 @@ RUN npm install
 # Bundle your app source code inside the Docker image
 COPY . .
 # Define the command to run your application
-CMD ["npm", "strat"]
+CMD ["npm", "start"]
