@@ -2,16 +2,13 @@
 FROM node:14
 # Set the working directory in the container
 WORKDIR /usr/src/app
-# Install the application dependencies
-CMD ["cd","frontend"]
-RUN npm install
-CMD ["cd",".."]
-COPY package*.json ./
-RUN npm install
-# Bundle your app source code inside the Docker image
-COPY . .
+COPY . . #copy the enire source code in the present working directory 
+WORKDIR /frontend
+RUN npm install #installing dependencies which are related to frontend 
+WORKDIR ..
+RUN npm install #installinf dependencies which are related to entire application
 RUN npm start 
-RUN cd frontend 
+WORKDIR /frontend 
 RUN npm start 
 # Expose the port the app runs on
 EXPOSE 3000
