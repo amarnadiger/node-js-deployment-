@@ -13,11 +13,14 @@ RUN npm install
 RUN npm setup
 RUN cd frontend
 RUN npm install
-
-
+RUN cd ..
+COPY package*.json ./
+RUN npm install
 # Bundle your app source code inside the Docker image
 COPY . .
-
+RUN npm start 
+RUN cd frontend 
+RUN npm start 
 # Expose the port the app runs on
 EXPOSE 3000
 
