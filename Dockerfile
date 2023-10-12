@@ -3,9 +3,9 @@ FROM node:14
 # Set the working directory in the container
 WORKDIR /usr/src/app
 # Install the application dependencies
-RUN cd frontend
+CMD ["cd","frontend"]
 RUN npm install
-RUN cd ..
+CMD ["cd",".."]
 COPY package*.json ./
 RUN npm install
 # Bundle your app source code inside the Docker image
