@@ -3,12 +3,17 @@ FROM node:14
 
 # Set the working directory in the container
 WORKDIR /usr/src/app
+RUN npm install
 
 # Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
 
 # Install the application dependencies
 RUN npm install
+RUN npm setup
+RUN cd frontend
+RUN npm install
+
 
 # Bundle your app source code inside the Docker image
 COPY . .
