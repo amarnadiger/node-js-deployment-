@@ -1,18 +1,18 @@
 version: '3'
- services:
-   frontend:
-     image: my_app_frontend:1.4
-     build:
-       context: ./frontend/
-     ports:
+services:
+  frontend:
+    image: my_app_frontend:1.4
+    build:
+      context: ./frontend/
+    ports:
       - "3000:3000"
-   shared:
-     image: shared:1.4
-     build: .
-   mongo:
-     image: mongo:latest
-     environment:
-       DATABASE_URL: mongodb+srv://amarnadagera01:lnvtV0kN1JUGbP7D@cluster0.mbvrpfb.mongodb.net/starter crm app database?retryWrites=true&w=majorit
-     ports:
+  shared:
+    image: shared:1.4
+    build: .
+  mongo:
+    image: mongo:latest
+    environment:
+      DATABASE_URL: "mongodb+srv://amarnadagera01:lnvtV0kN1JUGbP7D@cluster0.mbvrpfb.mongodb.net/starter%20crm%20app%20database?retryWrites=true&w=majority"
+    ports:
        - "3001:8000"
 
