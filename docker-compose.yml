@@ -6,7 +6,6 @@ version: '3'
        context: ./frontend/
      ports:
       - "3000:3000"
-    
    shared:
      image: shared:1.4
      build: .
@@ -16,5 +15,4 @@ version: '3'
        DATABASE_URL: mongodb+srv://amarnadagera01:lnvtV0kN1JUGbP7D@cluster0.mbvrpfb.mongodb.net/starter crm app database?retryWrites=true&w=majorit
      ports:
        - "3001:8000"
-  
-    
+
