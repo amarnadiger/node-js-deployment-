@@ -7,12 +7,10 @@ services:
     ports:
       - "3000:3000"
   shared:
-    image: shared:1.5
-    build: .
-  mongo:
     image: mongo:latest
+    build: .
     environment:
-      DATABASE_URL: "mongodb+srv://amarnadagera01:lnvtV0kN1JUGbP7D@cluster0.mbvrpfb.mongodb.net/starter%20crm%20app%20database?retryWrites=true&w=majority"
+      DATABASE_URL: "mongodb+srv://amarnadagera01:lnvtV0kN1JUGbP7D@cluster0.mbvrpfb.mongodb.net/starter crm app%20database?retryWrites=true&w=majority"
     ports:
        - "3001:8888"
 
