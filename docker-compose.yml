@@ -1,13 +1,13 @@
 version: '3'
 services:
   frontend:
-    image: my_app_frontend:1.4
+    image: my_app_frontend:1.5
     build:
       context: ./frontend/
     ports:
       - "3000:3000"
   shared:
-    image: shared:1.4
+    image: shared:1.5
     build: .
   mongo:
     image: mongo:latest
