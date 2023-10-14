@@ -4,16 +4,15 @@ version: '3'
     image: frontend:1.4
     build:
       context: ./frontend/
+    
   shared:
     image: my_app:1.4
     build: .
-    environment:
-      DATABASE_URL: mongodb+srv://amarnadagera01:tbERyf7jKVCeCwpV@cluster0.t3nrpbk.mongodb.net/?retryWrites=true&w=majority
-    depends_on:
-      - mongo 
-    ports:
-      - "3001:5000"
   mongo:
     image: mongo:latest
+    environment:
+      DATABASE_URL: mongodb+srv://amarnadagera01:lnvtV0kN1JUGbP7D@cluster0.mbvrpfb.mongodb.net/starter crm app database?retryWrites=true&w=majorit
+    ports:
+      - "3001:8000"
   
     
